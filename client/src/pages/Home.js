@@ -4,7 +4,7 @@ import products from '../products'
 import Product from '../components/Product'
 const Home = () => {
   return (
-    <div>
+    <div className='py-5'>
       <h2>Our products</h2>
       <Row>
         {products.map((product) => (
