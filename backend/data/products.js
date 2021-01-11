@@ -1,5 +1,3 @@
-//we need this file here if we are not fetching data from backend otherwise we can delete it
-
 const products=[
     {
         _id:'1',
@@ -72,4 +70,4 @@ const products=[
 
     }
 ]
-export default products
+module.exports= products
