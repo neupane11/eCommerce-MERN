@@ -1,3 +1,5 @@
+import mongoose from 'mongoose'
+
 const productSchema=mongoose.Schema({
     user:{//which admin created which product
         type:mongoose.Schema.Types.ObjectId,
@@ -50,5 +52,5 @@ const productSchema=mongoose.Schema({
 },{
     timestamps:true
 })
-const Product=mongoose.model(Product,productSchema)
+const Product=mongoose.model('Product',productSchema)
 export default Product

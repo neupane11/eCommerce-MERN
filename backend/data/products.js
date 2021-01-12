@@ -1,6 +1,6 @@
 const products=[
     {
-        _id:'1',
+       
         name:'Airpods',
         image:'/img/airpod.jpeg',
         description:'wireless bluetooth airphones',
@@ -15,7 +15,7 @@ const products=[
     
     {
 
-        _id:'2',
+       
         name:'alexa',
         image:'/img/alexa.jpeg',
         description:'wireless bluetooth speaker',
@@ -29,7 +29,7 @@ const products=[
     },
     {
 
-        _id:'3',
+       
         name:'alexa',
         image:'/img/alexa.jpeg',
         description:'wireless bluetooth speaker',
@@ -43,7 +43,7 @@ const products=[
     },
     {
 
-        _id:'4',
+       
         name:'alexa',
         image:'/img/alexa.jpeg',
         description:'wireless bluetooth speaker',
@@ -57,7 +57,7 @@ const products=[
     },
     {
 
-        _id:'5',
+       
         name:'alexa',
         image:'/img/alexa.jpeg',
         description:'wireless bluetooth speaker',
