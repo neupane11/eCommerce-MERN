@@ -1,12 +1,15 @@
 import React from 'react'
 import {useEffect,useState} from 'react'
-import axios from 'axios'
+import {useDispatch,useSelector} from 'react-redux'
+//import axios from 'axios'
 import { Row, Col } from 'react-bootstrap'
 //import products from '../products'
 import Product from '../components/Product'
+import {homepageProductsAction} from '../actions/productActions'
 
 const Home = () => {
   //fetching data from backend
+  /*
   const [products,setProducts]=useState([])
 
   useEffect(()=>{
@@ -16,7 +19,14 @@ const Home = () => {
     }
     fetchProducts()
   },[])
+  */
 
+  const dispatch=useDispatch()
+  useEffect(()=>{
+    dispatch(homepageProductsAction())
+  },[dispatch])
+  const homePageProducts=useSelector(state=>state.homePageProducts)//homePageProducts is the
+  const {error,products}=homePageProducts
   return (
     <div className='py-5'>
       <h2>Our products</h2>

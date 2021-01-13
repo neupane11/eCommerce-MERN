@@ -1,12 +1,15 @@
 import React, {useState,useEffect} from 'react'
-import axios from 'axios'
+import {useDispatch,useSelector} from 'react-redux'
+//import axios from 'axios'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 
 import { Link } from 'react-router-dom'
 import Ratings from '../components/Ratings'
 //import products from '../products'
-
+import {individualProductAction} from '../actions/productActions'
 const ProductPage = ({ match }) => {
+
+  /*
   const [product,setProduct]= useState({})
   
   useEffect(()=>{
@@ -16,9 +19,16 @@ const ProductPage = ({ match }) => {
     }
     fetchProduct()
   },[match])
+  */
 
   //const product = products.find((p) => p._id === match.params.id) //match get id from url
-
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(individualProductAction(match.params.id))
+    
+  },[dispatch,match])
+  const individualProduct=useSelector(state=>state.individualProduct)
+  const{error,product}=individualProduct
   return (
     <>
       <Link className='btn btn-dark my-3' to='/'>
